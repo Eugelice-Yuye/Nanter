@@ -1,0 +1,34 @@
+table{
+    border: 1px solid;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+td{
+    width: 5px;
+    height: 5px;
+    border: 1px solid;
+}
+
+.player-square{
+    background-color: aquamarine;
+    position: relative;
+}
+
+.ficha:first{
+    text-orientation: upright;
+    vertical-align: text-bottom;
+}
+
+.table-pieces{
+    width: 75%;
+    height: 75%;
+    border-spacing: 10px;
+    background-color: blue;
+}
+
+.table-pieces td{
+    background-color: aquamarine;
+}
