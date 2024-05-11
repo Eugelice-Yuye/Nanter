@@ -6,7 +6,11 @@ table{
     transform: translate(-50%,-50%);
 }
 
-td{
+.container{
+    background-color: orangered;
+}
+
+td:not(.ficha){
     width: 5px;
     height: 5px;
     border: 1px solid;
@@ -17,9 +21,8 @@ td{
     position: relative;
 }
 
-.ficha:first{
-    text-orientation: upright;
-    vertical-align: text-bottom;
+.ficha{
+    border: 1px solid;
 }
 
 .table-pieces{
@@ -32,3 +35,55 @@ td{
 .table-pieces td{
     background-color: aquamarine;
 }
+
+.left{
+    text-orientation: sideways-right;
+    writing-mode: vertical-lr;
+    text-align: center;
+}
+
+.right{
+    text-orientation: sideways;
+    writing-mode: vertical-rl;
+    transform: rotateZ(180deg);
+    text-align: center;
+}
+
+.top{
+    transform: rotateZ(180deg);
+    text-align: center;
+}
+.botton{
+    text-align: center;
+}
+
+#dice {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(-20deg) rotateY(45deg);
+    text-align: center;
+    cursor: pointer;
+}
+.face {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border: 2px solid #000;
+    color: #000;
+    text-align: center;
+    line-height: 60px;
+    font-size: 2em;
+    display: none;
+}
+.face.active {
+    display: block;
+}
+#face1 { transform: translateZ(30px); }
+#face2 { transform: rotateY(90deg) translateZ(30px); }
+#face3 { transform: rotateY(180deg) translateZ(30px); }
+#face4 { transform: rotateY(-90deg) translateZ(30px); }
+#face5 { transform: rotateX(-90deg) translateZ(30px); }
+#face6 { transform: rotateX(90deg) translateZ(30px); }
