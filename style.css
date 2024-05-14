@@ -1,3 +1,10 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
 table{
     border: 1px solid;
     position: absolute;
@@ -57,33 +64,83 @@ td:not(.ficha){
     text-align: center;
 }
 
-#dice {
-    width: 60px;
-    height: 60px;
+.plano
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.dice {
+    width: 100px;
+    height: 100px;
     position: relative;
     transform-style: preserve-3d;
-    transform: rotateX(-20deg) rotateY(45deg);
-    text-align: center;
-    cursor: pointer;
+    animation: girar 4s;
+    transition: all .45s;
 }
 .face {
     position: absolute;
-    width: 60px;
-    height: 60px;
-    background-color: #fff;
-    border: 2px solid #000;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(145deg, #ebe9e7, #fff);
+    border: 5px solid #fCfBfA;
+    border-radius: 20px;
     color: #000;
-    text-align: center;
-    line-height: 60px;
-    font-size: 2em;
-    display: none;
+    transform-style: preserve-3d;
 }
-.face.active {
-    display: block;
+
+.face::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: #fffdfb;
+    transform: translateZ(-1px);
 }
-#face1 { transform: translateZ(30px); }
-#face2 { transform: rotateY(90deg) translateZ(30px); }
-#face3 { transform: rotateY(180deg) translateZ(30px); }
-#face4 { transform: rotateY(-90deg) translateZ(30px); }
-#face5 { transform: rotateX(-90deg) translateZ(30px); }
-#face6 { transform: rotateX(90deg) translateZ(30px); }
+
+.face::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #444;
+}
+.pi { transform: translateZ(50px); }
+.duke { transform: rotateX(90deg) translateZ(50px); }
+.terna { transform: rotateY(-90deg) translateZ(50px); }
+.quadra { transform: rotateY(90deg) translateZ(50px); }
+.quina { transform: rotateX(-90deg) translateZ(50px); }
+.cena { transform: rotateX(180deg) translateZ(50px); }
+
+.pi::after { 
+    width: 30px;
+    height: 30px;
+    background-color: red;
+ }
+.duke::after { margin: -26px 0 0 -26px; box-shadow: 40px 40px; }
+.terna::after { margin: -26px 0 0 -26px; box-shadow: 26px 26px, 52px 52px; }
+.quadra::after { background-color: red; margin: -20px 0 0 -20px; box-shadow: 40px 0 RED, 0 40px red, 40px 40px red; }
+.quina::after { margin: -26px 0 0 -26px; box-shadow: 26px 26px, 52px 52px, 52px 0, 0 52px; }
+.cena::after { margin: -26px 0 0 -26px; box-shadow: 40px 0, 0 25px, 40px 25px, 0 50px, 40px 50px; }
+
+@keyframes girar {
+    
+    15%{transform: rotateX(455deg) rotateY(155deg);}
+    35%{transform: rotateX(910deg) rotateY(310deg);}
+    50%{
+        transform: rotateX(1365deg) rotateY(465deg);
+    }
+    65%{transform: rotateX(1820deg) rotateY(620deg);}
+    85%{transform: rotateX(2275deg) rotateY(775deg);}
+    100%{
+        transform: rotateX(2730deg) rotateY(930deg);
+    }
+}
