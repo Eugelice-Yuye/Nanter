@@ -1,10 +1,8 @@
 *{
-
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     outline: none;
-
 }
 
 table{
@@ -99,6 +97,19 @@ td:not(.ficha){
     width: 100%;
     height: 90vh;
     position: relative;
+
+}
+
+.dice {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 70%;
+    left: 70%;
+    transform-style: preserve-3d;
+    animation: girar 2.5s;
+    transition: all .45s;
+    
 }
 
 .dice {
@@ -137,6 +148,17 @@ td:not(.ficha){
 #face4 { transform: rotateY(-90deg) translateZ(30px); }
 #face5 { transform: rotateX(-90deg) translateZ(30px); }
 #face6 { transform: rotateX(90deg) translateZ(30px); }
+
+.face::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: #fffdfb;
+    transform: translateZ(-1px);
+}
+
 
 .face::before {
     content: '';
@@ -187,4 +209,5 @@ td:not(.ficha){
     65%{transform: translate(-100%,-100%) rotateX(1820deg) rotateY(620deg);}
     85%{transform: translate(-205%,-250%) rotateX(2730deg) rotateY(930deg);}
  
+
 }
