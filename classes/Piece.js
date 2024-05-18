@@ -1,5 +1,6 @@
 export class piece{
-    color
+    color;
+
     constructor(color){
         this.color = color
     }

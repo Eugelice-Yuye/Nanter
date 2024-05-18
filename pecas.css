@@ -1,0 +1,14 @@
+.pecas 
+{
+    position: relative;
+}
+
+.pecas > *
+{
+    position: relative;
+    width: 5px;
+    height: 5px;
+    background-color: #343434;
+    box-shadow: 0 .1rem .2rem rgba(0, 0, 0, .3);
+    border-radius: 50%;
+}
