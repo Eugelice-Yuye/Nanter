@@ -4,24 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pecas.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Nanter</title>
 </head>
 <body>
 <div class="container">
         <p>ABBA</p>
-   <table>
+   <table class="table">
     <tr>
         <td class="pp3 player-square" colspan="9" rowspan="9">
            <table class="table-pieces">
             <tr>
-                <td class="pp3_house"></td>
-                <td class="pp3_house"></td>
+                <td class="camp1"></td>
+                <td class="camp2"></td>
             </tr>
 
             <tr>
-                <td class="pp3_house"></td>
-                <td class="pp3_house"></td>
+                <td class="camp3"></td>
+                <td class="camp4"></td>
             </tr>
            </table> 
         </td>
@@ -259,22 +260,52 @@
     </tr>
    
    </table>
+
+   <div class="dice">
+    <div class="face pi"></div>
+    <div class="face   duke"></div>
+    <div class="face terna"></div>
+    <div class="face quadra"></div>
+    <div class="face quina"></div>
+    <div class="face cena"></div>
 </div>
+<div class="dice1">
+    <div class="face pi"></div>
+    <div class="face   duke"></div>
+    <div class="face terna"></div>
+    <div class="face quadra"></div>
+    <div class="face quina"></div>
+    <div class="face cena"></div>
+</div>
+</div>
+
+<div class="pecas">
+    <div class="peca1"></div>
+    <div class="peca2"></div>
+    <div class="peca3"></div>
+    <div class="peca4"></div>
+</div>
+
+<!--div id="dice" onclick="rollDice()">
+    <div id="face1" class="face">1</div>
+    <div id="face2" class="face">2</div>
+    <div id="face3" class="face">3</div>
+    <div id="face4" class="face">4</div>
+    <div id="face5" class="face">5</div>
+    <div id="face6" class="face">6</div>
+</div-->
     
-<!-- Dado de 6 faces -->
-<div id="dice" class="plano">
-    <div class="dice">
-        <div class="face pi"></div>
-        <div class="face duke"></div>
-        <div class="face terna"></div>
-        <div class="face quadra"></div>
-        <div class="face quina"></div>
-        <div class="face cena"></div>
+    <!-- Dado de 6 faces -->
+    
+        
+
+    <div class="readyToPlay">
+        <span>Lança o dado</span>
     </div>
-</div>
-
-
-    <script src="script.js" type="module"></script>
+    <script src="/classes/Piece.js"></script>
+    <script src="script.js"></script>
+    <script src="pecas.js"></script>
+    <script src="Tabela.js"></script>
 
 </body>
 </html>
