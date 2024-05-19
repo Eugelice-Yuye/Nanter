@@ -6,15 +6,18 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="pecas.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
     <title>Nanter</title>
 </head>
 <body>
 <div class="container">
-        <p>ABBA</p>
+    
+        <p id="definitions">ABBA</p>
    <table>
     <tr>
         <td class="pp3 player-square" colspan="9" rowspan="9">
-           <table class="table-pieces">
+           <table class="table-pieces-3">
             <tr>
                 <td class="camp1"></td>
                 <td class="camp2"></td>
@@ -28,13 +31,13 @@
         </td>
         <td class="top" id="s56"><span>16</span></td>
 
-        <td class="ficha top" id="s55">
+        <td class="ficha top ficha_laranja" id="s55">
             <Span>FICHA</Span>
         </td>
 
         <td class="top" id="s54"><span>14</span></td>
         <td class="pp4 player-square" colspan="9" rowspan="9">
-            <table class="table-pieces">
+            <table class="table-pieces-4">
                 <tr>
                     <td class="pp4_house">
                         <img class="piece" src="./assets/icons/pieces/bluePiece.svg" alt="">
@@ -75,9 +78,9 @@
         <td class="top" id="s51"><span>11</span></td>
     </tr>
     <tr>
-        <td class="top"><span>F</span></td>
+        <td class="top ficha_laranja"><span>F</span></td>
         <td class="top"><span>IV</span></td>
-        <td class="top"><span>F</span></td>
+        <td class="top ficha_rosa"><span>F</span></td>
     </tr>
     <tr>
         <td class="top" id="s61"><span>1</span></td>
@@ -104,7 +107,7 @@
         <td class="left"><span>13</span></td>
         <td class="left"><span>12</span></td>
         <td class="left"><span>11</span></td>
-        <td class="left"><span>F</span></td>
+        <td class="left ficha_laranja"><span>F</span></td>
         <td class="left"><span>9</span></td>
         <td class="left"><span>8</span></td>
         <td class="left"><span>7</span></td>
@@ -116,14 +119,14 @@
         <td class="right"><span>3</span></td>
         <td class="right"><span>2</span></td>
         <td class="right"><span>1</span></td>
-        <td class="right"><span>F</span></td>
+        <td class="right ficha_rosa"><span>F</span></td>
         <td class="right"><span>19</span></td>
         <td class="right"><span>18</span></td>
         <td class="right"><span>17</span></td>
         <td class="right"><span>16</span></td>
     </tr>
     <tr>
-        <td class="ficha left" id="s75">
+        <td class="ficha left ficha_cinza" id="s75">
             <span>FICHA</span>
         </td>
         <td class="left"><span>I</span></td>
@@ -145,7 +148,7 @@
         <td class="right"><span>III</span></td>
         <td class="right"><span>II</span></td>
         <td class="right"><span>I</span></td>
-        <td class="ficha right" id="s35">
+        <td class="ficha right ficha_rosa" id="s35">
             <span>FICHA</span>
         </td>
     </tr>
@@ -155,7 +158,7 @@
         <td class="left"><span>17</span></td>
         <td class="left"><span>18</span></td>
         <td class="left"><span>19</span></td>
-        <td class="left"><span>F</span></td>
+        <td class="left ficha_cinza"><span>F</span></td>
         <td class="left"><span>1</span></td>
         <td class="left"><span>2</span></td>
         <td class="left"><span>3</span></td>
@@ -167,7 +170,7 @@
         <td class="right"><span>7</span></td>
         <td class="right"><span>8</span></td>
         <td class="right"><span>9</span></td>
-        <td class="right"><span>F</span></td>
+        <td class="right ficha_azul"><span>F</span></td>
         <td class="right"><span>11</span></td>
         <td class="right"><span>12</span></td>
         <td class="right"><span>13</span></td>
@@ -176,7 +179,7 @@
 
     <tr>
         <td class="pp1 player-square" colspan="9" rowspan="9">
-            <table class="table-pieces">
+            <table class="table-pieces-1">
                 <tr>
                     <td class="pp1_house">
                         <img class="piece" src="./assets/icons/pieces/bluePiece.svg" alt="">
@@ -202,7 +205,7 @@
         <td class="botton" id="s24"><span>4</span></td>
 
         <td class="pp2 player-square" colspan="9" rowspan="9">
-            <table class="table-pieces">
+            <table class="table-pieces-2">
                 <tr>
                     <td class="pp2_house"></td>
                     <td class="pp2_house"></td>
@@ -232,9 +235,9 @@
         <td class="botton" id="s21"><span>1</span></td>
     </tr>
     <tr>
-        <td class="botton"><span>F</span></td>
+        <td class="botton ficha_cinza"><span>F</span></td>
         <td class="botton"><span>IV</span></td>
-        <td class="botton"><span>F</span></td>
+        <td class="botton ficha_azul"><span>F</span></td>
     </tr>
     <tr>
         <td class="botton" id="s11"><span>11</span></td>
@@ -253,7 +256,7 @@
     </tr>
     <tr>
         <td class="botton" id="s14"><span>14</span></td>
-        <td class="ficha" id="s15">
+        <td class="ficha ficha_azul" id="s15">
             <Span>FICHA</Span>
         </td>
         <td class="botton" id="s16"><span>16</span></td>
