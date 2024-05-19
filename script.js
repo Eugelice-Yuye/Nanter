@@ -92,7 +92,7 @@ const randDado = aleatorio => {
                 break;
         }
         dado.style.animation = "none";
-    }, 3000)
+    }, 2550)
 }
 
 const randDado1 = aleatorio1 => {
@@ -133,7 +133,7 @@ const randDado1 = aleatorio1 => {
         }
         dado1.style.animation = "none";
         console.log(con1 + con2);
-    }, 3000)
+    }, 2550)
 }
 
 roll.addEventListener('click',dadoRandomico);
