@@ -26,31 +26,23 @@ var rotating = false;
         }
 
 
-document.addEventListener("DOMContentLoaded", () => {
-    const settingsButton = document.getElementById("settingsButton");
-    const settingsPopup = document.getElementById("settingsPopup");
-    const closePopupButton = document.getElementById("closePopupButton");
-
-    settingsButton.addEventListener("click", () => {
-        settingsPopup.style.display = "block";
-    });
-
-    closePopupButton.addEventListener("click", () => {
-        settingsPopup.style.display = "none";
-    });
-
-    document.getElementById("mainPageButton").addEventListener("click", () => {
-        window.location.href = "index.html"; // Altere para o URL da sua página principal
-    });
-
-    document.getElementById("resumeGameButton").addEventListener("click", () => {
-        settingsPopup.style.display = "none";
-        // Adicione qualquer lógica adicional para retomar o jogo aqui
-    });
-
-    document.getElementById("basicSettingButton").addEventListener("click", () => {
-        alert("Configuração Básica Executada");
-        // Adicione a lógica para a configuração básica aqui
-    });
-});
-
+        document.addEventListener("DOMContentLoaded", () => {
+            const settingsButton = document.getElementById("settingsButton");
+            const settingsPopup = document.getElementById("settingsPopup");
+        
+            settingsButton.addEventListener("click", () => {
+                settingsPopup.style.display = "flex";
+            });
+        
+            document.getElementById("mainPageButton").addEventListener("click", () => {
+                window.location.href = "home.html"; // Altere para o URL da sua página principal
+            });
+        
+            document.getElementById("restartPageButton").addEventListener("click", () => {
+                window.location.reload(); // Recarrega a página atual
+            });
+        
+            document.getElementById("resumePageButton").addEventListener("click", () => {
+                settingsPopup.style.display = "none";
+            });
+        });

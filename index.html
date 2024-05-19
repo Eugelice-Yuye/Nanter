@@ -12,8 +12,29 @@
 </head>
 <body>
 <div class="container">
-    
-        <p id="definitions">ABBA</p>
+    <!-- Botão de Configuração -->
+    <button id="settingsButton">
+        <i class="fas fa-cog"></i>
+    </button>
+
+    <!-- Pop-up de Configurações -->
+    <div id="settingsPopup" class="popup">
+        <div class="popup-content">
+            <button id="mainPageButton">
+                <i class="fas fa-home"></i>
+                <span>Voltar à Página Principal</span>
+            </button>
+            <button id="restartPageButton">
+                <i class="fas fa-redo"></i>
+                <span>Reiniciar</span>
+            </button>
+            <button id="resumePageButton">
+                <i class="fas fa-arrow-left"></i>
+                <span>Voltar</span>
+            </button>
+        </div>
+    </div>
+
    <table>
     <tr>
         <td class="pp3 player-square" colspan="9" rowspan="9">
@@ -290,7 +311,7 @@
     <div id="face6" class="face">6</div>
 </div-->
 
-    <script src="custom.js"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>
