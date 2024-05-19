@@ -52,6 +52,7 @@ const dado1 = document.querySelector('.dice1');
 const roll = document.querySelector('.table');
 var con1 ="";
 var con2 ="";
+let beat = new Audio('./Audio/dice_roll-96878.mp3');
 
 const dadoRandomico = () =>{
     
@@ -78,7 +79,9 @@ const dadoRandomico1 = () =>{
 }
 
 const randDado = aleatorio => {
-    dado.style.animation = "girar 2.5s";
+    dado.style.animation = "girar 1.5s";
+    beat.load();
+    beat.play();
     setTimeout(()=>{
         
         switch (aleatorio) {
@@ -115,11 +118,14 @@ const randDado = aleatorio => {
                 break;
         }
         dado.style.animation = "none";
-    }, 2550)
+        beat.pause();
+    }, 1050)
 }
 
 const randDado1 = aleatorio1 => {
-    dado1.style.animation = "girar 2.5s";
+    dado1.style.animation = "girar 1.5s";
+    beat.load();
+    beat.play();
     setTimeout(()=>{
         
         switch (aleatorio1) {
@@ -155,8 +161,9 @@ const randDado1 = aleatorio1 => {
                 break;
         }
         dado1.style.animation = "none";
+        beat.pause();
         console.log(con1 + con2);
-    }, 2550)
+    }, 1050)
 }
 
 roll.addEventListener('click',dadoRandomico);
@@ -233,3 +240,5 @@ update: function name(params) {
                 settingsPopup.style.display = "none";
             });
         });*/
+
+     
