@@ -1,3 +1,4 @@
+
 var rotating = false;
 
         function rollDice() {
@@ -24,6 +25,28 @@ var rotating = false;
             }
         }
 
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const settingsButton = document.getElementById("settingsButton");
+            const settingsPopup = document.getElementById("settingsPopup");
+
+            settingsButton.addEventListener("click", () => {
+                settingsPopup.style.display = "flex";
+            });
+
+            document.getElementById("mainPageButton").addEventListener("click", () => {
+                window.location.href = "home.html"; // Altere para o URL da sua página principal
+            });
+
+            document.getElementById("restartPageButton").addEventListener("click", () => {
+                window.location.reload(); // Recarrega a página atual
+            });
+
+            document.getElementById("resumePageButton").addEventListener("click", () => {
+                settingsPopup.style.display = "none";
+            });
+        });
+        
 const dado = document.querySelector('.dice');
 const dado1 = document.querySelector('.dice1');
 const roll = document.querySelector('.table');
@@ -92,7 +115,7 @@ const randDado = aleatorio => {
                 break;
         }
         dado.style.animation = "none";
-    }, 2050)
+    }, 2550)
 }
 
 const randDado1 = aleatorio1 => {
@@ -133,7 +156,7 @@ const randDado1 = aleatorio1 => {
         }
         dado1.style.animation = "none";
         console.log(con1 + con2);
-    }, 2050)
+    }, 2550)
 }
 
 roll.addEventListener('click',dadoRandomico);
@@ -192,12 +215,21 @@ update: function name(params) {
 
     if (this.dado.y <= 0) 
         this.dado.mouseY = direccao.baixo;
+=======
+            settingsButton.addEventListener("click", () => {
+                settingsPopup.style.display = "flex";
+            });
         
-
-}
-
-var ludo = Object.assign({},jogo);
-ludo.initialize();
-
-
-*/
+            document.getElementById("mainPageButton").addEventListener("click", () => {
+                window.location.href = "home.html"; // Altere para o URL da sua página principal
+            });
+>>>>>>> 56c87a70e26e2ec695d0dc55d940a260b27f2bd1
+        
+            document.getElementById("restartPageButton").addEventListener("click", () => {
+                window.location.reload(); // Recarrega a página atual
+            });
+        
+            document.getElementById("resumePageButton").addEventListener("click", () => {
+                settingsPopup.style.display = "none";
+            });
+        });*/

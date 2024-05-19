@@ -1,8 +1,69 @@
 *{
-    padding: 0;
     margin: 0;
-    box-sizing: border-box;
-    outline: none;
+    padding: 0;
+}
+
+#settingsButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 32px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #333;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.popup-content button {
+    margin: 20px;
+    padding: 20px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup-content button i {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.popup-content button span {
+    font-size: 18px;
+}
+
+.popup-content button:hover {
+    color: #ffeb3b;
+}
+
+#definitions{
+    text-align: center;
+    padding-top: 15px;
 }
 
 table{
@@ -11,10 +72,24 @@ table{
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
+    background-color: #fff;
+    border: none;
+    border-radius: 15%;
 }
 
+td{
+    background-color: #fff;
+}
+
+/*background-image: linear-gradient(#7bb4e3,#6f6f6f,#f48fb1,#ffb74d
+    );*/
+
 .container{
-    background-color: orangered;
+    background-image: linear-gradient(to right bottom,
+    #f9e4b7,#f5f5dc
+     );
+    width: 100%;
+    height: 100vh;
 }
 
 td:not(.ficha){
@@ -23,8 +98,23 @@ td:not(.ficha){
     border: 1px solid;
 }
 
-.player-square{
-    background-color: aquamarine;
+.pp3{
+    background-color: #ffb74d;
+    position: relative;
+}
+
+.pp4{
+    background-color: #f48fb1;
+    position: relative;
+}
+
+.pp1{
+    background-color: #6f6f6f;
+    position: relative;
+}
+
+.pp2{
+    background-color: #7bb4e3;
     position: relative;
 }
 
@@ -32,17 +122,68 @@ td:not(.ficha){
     border: 1px solid;
 }
 
-.table-pieces{
+.ficha_laranja{
+    background-color: #ffb74d;
+
+}
+
+.ficha_rosa{
+    background-color: #f48fb1;
+}
+
+.ficha_cinza{
+    background-color: #6f6f6f;
+
+}
+
+.ficha_azul{
+    background-color: #7bb4e3;
+
+}
+
+.table-pieces-3{
     width: 75%;
     height: 75%;
     border-spacing: 10px;
-    background-color: blue;
+    background-color: #fff;
 }
 
-.table-pieces td{
-    background-color: aquamarine;
+.table-pieces-3 td{
+    background-color: #ffb74d;
 }
 
+.table-pieces-4{
+    width: 75%;
+    height: 75%;
+    border-spacing: 10px;
+    background-color: #fff;
+}
+
+.table-pieces-4 td{
+    background-color: #f48fb1;
+}
+
+.table-pieces-1{
+    width: 75%;
+    height: 75%;
+    border-spacing: 10px;
+    background-color: #fff;
+}
+
+.table-pieces-1 td{
+    background-color: #6f6f6f;
+}
+
+.table-pieces-2{
+    width: 75%;
+    height: 75%;
+    border-spacing: 10px;
+    background-color: #fff;
+}
+
+.table-pieces-2 td{
+    background-color: #7bb4e3;
+}
 .left{
     text-orientation: sideways-right;
     writing-mode: vertical-lr;
@@ -62,13 +203,6 @@ td:not(.ficha){
 }
 .botton{
     text-align: center;
-}
-
-.readyToPlay
-{
-    position: absolute;
-    top: 5%;
-    left: 15%;
 }
 
 .plano
